@@ -1,0 +1,54 @@
+---
+title: "Estudio de la variación en el tiempo de las cualidades de los mejores tenistas en el top 10"
+author: "Jesús Arellano, José Palma, Miguel Sanz"
+date: "2023-11-17"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE)
+library(readr)
+library(readxl)
+library(tidyverse)
+library(shiny)
+library(ggplot2)
+library(dplyr)
+library(knitr)
+library(modeest)
+library(patchwork)
+library(cowplot)
+```
+
+# *Planteamiento del Problema.*  
+\setlength{\parindent}{1cm}  
+	En la siguiente investigación es de interés observar las distintas cualidades de los mejores jugadores en el tenis que ocupan el top 10, ya que es de interés ver como varían las aptitudes de estos en el tiempo, con el fin de observar si en esta variación hubo una mejoría de las cualidades de los jugadores. Por tanto se decide tomar un rango de tiempo específico para hacer dicho análisis, siendo de atractivo para esta investigación desde el año 2000 hasta el 2024; de este punto se partirá para hacer los respectivos análisis estadísticos acerca de los mismos, además de lo anterior planteado se realizará el estudio de aquellas variables con las  que se puedan observar la correlación entre el ranking de los jugadores, los puntos ganados en los partidos y por torneos que juegan estos, tomando como respaldo para el estudio de la problemática planteada una base de datos de la siguiente página web (https://www.kaggle.com/datasets/guillemservera/tennis).
+ *Palabras claves: Correlación, Estadísticas, Cualidades, Variación, Tiempo.*  
+ 
+# *Preguntas de interés a responder.*  
+
+\setlength{\parindent}{1cm}  
+1 	Análisis de correlación bivariante de algunas de las variables contra el ranking de los jugadores en el top 10 desde el 2000 hasta el 2024.  
+
+2	Análisis descriptivo de las cualidades de los jugadores en el top 10 desde el 2000 hasta el 2024.  
+
+3	¿Cuáles son las tendencias y patrones observados en las estadísticas descriptivas de los datos del tenis, como el número de aces, dobles faltas, porcentaje de primeros saques de los jugadores en el top 10 desde el 2000 hasta el 2024?  
+
+4	Estudio de la variación de los puntos en promedio de los mejores tenistas en el tiempo desde el 2000 hasta 2024 que estén en el top 10.  
+
+5	¿Existe alguna relación entre el ranking de un jugador y su desempeño en diferentes aspectos del juego, como el porcentaje de partidos ganados, aces, errores no forzados, de los jugadores en el top 10 desde el 2000 hasta el 2024?  
+
+6¿Cómo se correlacionan variables específicas del juego, como la cantidad de dobles faltas y el porcentaje de primeros saques, en relación con el desempeño general de los jugadores en el top 10 desde el 2000 hasta el 2024?  
+
+7	¿Qué factores están más estrechamente relacionados entre sí en el tenis profesional, según el análisis de correlación bivariante?  
+
+8	Comparación de las estadísticas de los jugadores dependiendo del torneo en el que juega y como varían las cualidades de los mismo dependiendo del torneo.  
+
+8	 Estudio del radio de victorias y derrotas de los jugadores en top 10.
+
+
+
+
+
