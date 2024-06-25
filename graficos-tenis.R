@@ -3,6 +3,9 @@ library(readxl)
 library(ggplot2)
 library(plotly)
 library(dplyr)
+library(esquisse)
+library(grid)
+install.packages("grid")
 installed.packages("httr")
 installed.packages("shiny")
 installed.packages("shinydashboard")
@@ -71,6 +74,13 @@ est.faltas <- summary(dataframe_tenis$w_df)
 Var.faltas <- var(dataframe_tenis$w_df, na.rm = TRUE)
 DesEstandar.faltas <- sqrt(5.46527)
 
+est.aces <- summary(dataframe_tenis$w_ace)
+Var.aces <- var(dataframe_tenis$w_ace, na.rm = TRUE)
+DesEstandar.aces <- sqrt(34.5152)
+
+est.PtServicio <- summary(dataframe_tenis$w_svpt)
+Var.PtServicio <- var(dataframe_tenis$w_svpt, na.rm = TRUE)
+DesEstandar.PtServicio <- sqrt(881.4402)
 
 
 Correlacion1 <- lm(dataframe_tenis$PG ~ dataframe_tenis$winner_age) 
@@ -236,3 +246,50 @@ grafico.8 <- ggplot(dataframe_tenis) +
   theme(plot.title = element_text(size = 16L, face = "bold.italic"), axis.title.y = element_text(face = "italic"), 
         axis.title.x = element_text(face = "italic"), axis.text.y = element_text(face = "italic", angle = 30L), 
         axis.text.x = element_text(face = "italic", angle = 30L))
+
+#Grafico de radio de victorias de cada jugador 
+
+grafico.9 <- dataframe_tenis %>%
+  filter(winner_ioc %in% "ESP") %>%
+  ggplot() +
+  aes(x = PG, y = winner_name, fill = winner_name) +
+  geom_boxplot() +
+  scale_fill_viridis_d(option = "magma", 
+                       direction = 1) +
+  labs(x = "Partidos ganados", y = "Tenista de españa", title = "Partidos ganados de los tenistas en españa", 
+       fill = "Tenistas de españa") +
+  coord_flip() +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 16L, 
+                                  face = "bold.italic"), axis.title.x = element_text(face = "italic"), axis.text.y = element_text(face = "italic"), 
+        axis.text.x = element_text(face = "italic", angle = 35L, size = 8L), legend.text = element_text(face = "italic"), legend.title = element_text(face = "italic"))
+
+
+#Grafico del rendimiento de los jugadores dependiendo de la superficie
+
+
+grafico.10 <- dataframe_tenis %>%
+  filter(winner_ioc %in% "ESP") %>%
+  ggplot() +
+  aes(x = PG, y = winner_rank_points, fill = tourney_name, colour = winner_name) +
+  geom_point(size = 0.5, shape = "asterisk") +
+  scale_fill_viridis_d(option = "viridis", direction = 1) +
+  scale_color_viridis_d(option = "viridis", direction = 1) +
+  labs(x = "Partidos ganados", y = "Puntos en el ranking para el torneo x", title = "Partidos ganados en relacion a los puntos de ranking para los jugadores en España ") +
+  theme_minimal() +
+  theme(legend.position = "none", plot.title = element_text(size = 16L, face = "bold.italic"), axis.title.y = element_text(face = "italic"), axis.title.x = element_text(face = "italic"), 
+        axis.text.y = element_text(face = "italic"), axis.text.x = element_text(face = "italic"))
+
+
+grafico.D.10 <- ggplotly(grafico.10)
+
+
+
+
+
+
+
+
+
+
+
