@@ -5,6 +5,7 @@ library(plotly)
 library(dplyr)
 library(esquisse)
 library(grid)
+library(e1071)
 install.packages("grid")
 installed.packages("httr")
 installed.packages("shiny")
@@ -14,6 +15,7 @@ installed.packages("tidyverse")
 installed.packages("ggplot2")
 installed.packages("plotly")
 installed.packages("dplyr")
+install.packages("e1071")
 
 ####Dataframes####
 dataframe_tenis <- read_excel("R/dataframe-tenis.xlsx")
@@ -58,35 +60,120 @@ length(which(dataframe_tenis$winner_ioc == "SWE"))
 length(which(dataframe_tenis$winner_ioc == "THA"))
 length(which(dataframe_tenis$winner_ioc == "USA"))
 
+dataframe.ED1 <- data.frame(
+  Minimo = c("4"),
+  Cuartil.1 = c("1006"),
+  Mediana = c("1690"),
+  Media = c("2448"),
+  Cuartil.3 = c("2875"),
+  Maximo = c("16950"),
+  Des.Estandar = c("2381.3"),
+  Simetria = c("2.41"),
+  Curtosis = c("6.85") )
+
 est.PuntosRank <- summary(dataframe_tenis$winner_rank_points)
 Var.PuntosRank <- var(dataframe_tenis$winner_rank_points, na.rm = TRUE)
 DesEstandar.PuntosRank <- sqrt(5670576)
+Sim.PuntosRank <- skewness(dataframe_tenis$winner_rank_points, na.rm = TRUE)
+Cur.PuntosRank <- kurtosis(dataframe_tenis$winner_rank_points, na.rm = TRUE )
+
+dataframe.ED2 <- data.frame(
+  Minimo = c("170"),
+  Cuartil.1 = c("183"),
+  Mediana = c("185"),
+  Media = c("186"),
+  Cuartil.3 = c("190"),
+  Maximo = c("206"),
+  Des.Estandar = c("7.05"),
+  Simetria = c("0.41"),
+  Curtosis = c("0.15") )
 
 est.altura <- summary(dataframe_tenis$winner_ht)
 Var.altura <- var(dataframe_tenis$winner_ht, na.rm = TRUE)
 DesEstandar.altura <- sqrt(49.73896)
+Sim.altura <- skewness(dataframe_tenis$winner_ht, na.rm = TRUE)
+Cur.altura <- kurtosis(dataframe_tenis$winner_ht, na.rm = TRUE )
+
+dataframe.ED3 <- data.frame(
+  Minimo = c("15"),
+  Cuartil.1 = c("23"),
+  Mediana = c("26"),
+  Media = c("25.86"),
+  Cuartil.3 = c("29"),
+  Maximo = c("39"),
+  Des.Estandar = c("7.05"),
+  Simetria = c("0.3"),
+  Curtosis = c("-0.39") )
 
 est.edad <- summary(dataframe_tenis$winner_age)
 Var.edad <- var(dataframe_tenis$winner_age, na.rm = TRUE)
 DesEstandar.edad <- sqrt(17.97481)
+Sim.edad <- skewness (dataframe_tenis$winner_age, na.rm = TRUE)
+Cur.edad <- kurtosis (dataframe_tenis$winner_age, na.rm = TRUE)
+
+dataframe.ED4 <- data.frame(
+  Minimo = c("0"),
+  Cuartil.1 = c("1"),
+  Mediana = c("2"),
+  Media = c("2.77"),
+  Cuartil.3 = c("4"),
+  Maximo = c("17"),
+  Des.Estandar = c("2.34"),
+  Simetria = c("1.37"),
+  Curtosis = c("2.72") )
 
 est.faltas <- summary(dataframe_tenis$w_df)
 Var.faltas <- var(dataframe_tenis$w_df, na.rm = TRUE)
 DesEstandar.faltas <- sqrt(5.46527)
+Sim.faltas <- skewness (dataframe_tenis$w_df, na.rm = TRUE)
+Cur.faltas <- kurtosis (dataframe_tenis$w_df, na.rm = TRUE)
+
+dataframe.ED5 <- data.frame(
+  Minimo = c("0"),
+  Cuartil.1 = c("3"),
+  Mediana = c("6"),
+  Media = c("7.31"),
+  Cuartil.3 = c("10"),
+  Maximo = c("113"),
+  Des.Estandar = c("5.87"),
+  Simetria = c("2.48"),
+  Curtosis = c("21.71") )
 
 est.aces <- summary(dataframe_tenis$w_ace)
 Var.aces <- var(dataframe_tenis$w_ace, na.rm = TRUE)
 DesEstandar.aces <- sqrt(34.5152)
+Sim.aces <- skewness (dataframe_tenis$w_ace, na.rm = TRUE)
+Cur.aces <- kurtosis (dataframe_tenis$w_ace, na.rm = TRUE)
+
+dataframe.ED6 <- data.frame(
+  Minimo = c("0"),
+  Cuartil.1 = c("57"),
+  Mediana = c("73"),
+  Media = c("78.62"),
+  Cuartil.3 = c("95"),
+  Maximo = c("491"),
+  Des.Estandar = c("29.69"),
+  Simetria = c("1.33"),
+  Curtosis = c("7.23") )
 
 est.PtServicio <- summary(dataframe_tenis$w_svpt)
 Var.PtServicio <- var(dataframe_tenis$w_svpt, na.rm = TRUE)
 DesEstandar.PtServicio <- sqrt(881.4402)
+Sim.PtServicio <- skewness (dataframe_tenis$w_svpt, na.rm = TRUE)
+Cur.PuntosRank <- kurtosis (dataframe_tenis$w_svpt, na.rm = TRUE)
 
+#Correlaciones
 
 Correlacion1 <- lm(dataframe_tenis$PG ~ dataframe_tenis$winner_age) 
 summary(Correlacion1)
 sqrt(8.444e-05) #La correlacion es igual a 0.92%
 #No hay casi carrelacion entre los partidos ganados y la edad de los tenistas
+
+dataframe.ED7 <- data.frame(
+  Cor.Pearson.PG_aces = "16.67%",
+  R.cuadrado = "2.78%",
+  Coe.A = "261.5749",
+  Coe.B = "9.2613")
 
 Correlacion2 <- lm(dataframe_tenis$PG ~ dataframe_tenis$w_ace) 
 summary(Correlacion2)

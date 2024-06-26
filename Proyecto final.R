@@ -11,8 +11,7 @@ library(DT)
 
 ####GRAFICOS####
 ####CALCULOS ESTADISTICOS####
-#####DASHBOARD
-#DASHBOARD
+#####DASHBOARD####
 ####DASBOARD PAGE####
 ui<-dashboardPage(title="TRABAJO FINAL DE COMPUTACION 2", skin= "purple",
                   dashboardHeader(title="Contenido",
@@ -30,22 +29,34 @@ ui<-dashboardPage(title="TRABAJO FINAL DE COMPUTACION 2", skin= "purple",
                   dashboardSidebar(
                     sidebarMenu(id="sidebarID",
                                 menuItem("Portada", tabName = "Portada"),
-                                menuItem("Base de datos", tabName = "Datos"),
                                 menuItem("Introduccion", tabName = "Introduccion"),
-                                menuItem("Preguntas de investigacion", tabName = "Preguntas de investigacion"),
-                                menuItem("Objetivos", tabName = "Objetivos"),
-                                menuItem("Planteamiento", tabName = "PlanteamientO"),
-                                menuItem("Estadisticas",id = "chartsID",
-                                         menuSubItem("1er grafico", tabName = "grafico", icon = shiny::icon("eye")),
-                                         menuSubItem("2do grafico", tabName = "grafico4", icon =icon("eye")),
-                                         menuSubItem("3er grafico", tabName = "grafico5", icon =icon("eye")),
-                                         menuSubItem("4to grafico", tabName = "grafico2", icon =icon("eye")),
-                                         menuSubItem("5to grafico", tabName = "grafico6", icon =icon("eye")),
-                                         menuSubItem("6to grafico", tabName = "grafico3", icon =icon("eye")),
-                                         menuSubItem("7mo grafico", tabName = "", icon = icon("eye")),
-                                         menuSubItem("8vo grafico", tabName = "", icon = icon("eye")),
-                                         menuSubItem("9no grafico", tabName = "", icon = icon("eye")),
-                                         menuSubItem("10mo grafico", tabName = "", icon = icon("eye"))
+                                menuItem("Planteamiento", id = "PlanteamientoID",
+                                         menuSubItem("Desarrollo", tabName = "PlanteamientO",icon =icon("eye")),
+                                         menuSubItem("Objetivos",  tabName = "Objetivos",icon =icon("eye")),
+                                         menuSubItem("Preguntas de investigacion", tabName = "PreguntasDeInvestigacion", icon =icon("eye"))),
+                                menuItem("Bases legales", tabName = "BasesLegales"),
+                                menuItem("Documentacion", tabName = "Documentacion"),
+                                menuItem("Base de datos", tabName = "Datos"),
+                                menuItem("Estadisticas descriptivas", id = "EDID",
+                                         menuSubItem("Puntos en el ranking", tabName = "estadistica1", icon = icon("eye")),
+                                         menuSubItem("Altura", tabName = "estadistica2", icon = icon("eye")),
+                                         menuSubItem("Edad", tabName = "estadistica3", icon = icon("eye")),
+                                         menuSubItem("Dobles faltas", tabName = "estadistica4", icon = icon("eye")),
+                                         menuSubItem("Aces", tabName = "estadistica5", icon = icon("eye")),
+                                         menuSubItem("Puntos de servicio", tabName = "estadistica6", icon = icon("eye")),
+                                         menuSubItem("Correlacion de PG y aces", tabName = "correlacion", icon = icon("eye"))
+                                ),
+                                menuItem("Graficos",id = "chartsID",
+                                         menuSubItem("1er grafico", tabName = "grafico1", icon =icon("eye")),
+                                         menuSubItem("2do grafico", tabName = "grafico2", icon =icon("eye")),
+                                         menuSubItem("3er grafico", tabName = "grafico3", icon =icon("eye")),
+                                         menuSubItem("4to grafico", tabName = "grafico4", icon =icon("eye")),
+                                         menuSubItem("5to grafico", tabName = "grafico5", icon =icon("eye")),
+                                         menuSubItem("6to grafico", tabName = "grafico6", icon =icon("eye")),
+                                         menuSubItem("7mo grafico", tabName = "grafico7", icon =icon("eye")),
+                                         menuSubItem("8vo grafico", tabName = "grafico8", icon =icon("eye")),
+                                         menuSubItem("9no grafico", tabName = "grafico9", icon =icon("eye")),
+                                         menuSubItem("10mo grafico",tabName = "grafico10",icon =icon("eye"))
                                 ),
                                 menuItem("Resultados", tabName = "Resultados"),
                                 menuItem("Conclusiones", tabName = "Conclusiones"),
@@ -94,37 +105,116 @@ ui<-dashboardPage(title="TRABAJO FINAL DE COMPUTACION 2", skin= "purple",
                                 )
                                 
                               )),
-                      ####Preguntas de investigacion####
-                      tabItem("Preguntas de investigacion",
-                              box(title = "Preguntas", status = "info", widht = 12, list(
-                                elemento1 = "¿Existe una correlación positiva entre el número de aces marcados y los Partidos Ganados por jugador?",
-                                elemento2 = "¿Se puede predecir la cantidad de partidos ganados en función de los aces que marca un jugador?",
-                                elemento3 = "¿Cuáles son las estadísticas descriptivas de los jugadores del top 10 en términos de edad, altura, país de origen y estadísticas de juego?",
-                                elemento4 = "¿Existe una diferencia significativa en el rendimiento de los jugadores del top 10 según la superficie del torneo?",
-                                elemento5 = "¿Según la edad cómo se comportan las cualidades de los jugadores?",
-                                elemento6 = "¿Cuál es el porcentaje de partidos ganados por país y continente?",
-                                elemento7 = "¿Qué país tiene más partidos ganados?"
-                              ))
+                      ####PREGUNTAS DE INVESTIGACION####
+                      tabItem("PreguntasDeInvestigacion",
+                              box(title = "Preguntas", status = "info", widht = 12, HTML("<ul>
+            <li>¿Existe una correlación positiva entre el número de aces marcados y los Partidos Ganados por jugador?</li>
+            <li>¿Se puede predecir la cantidad de partidos ganados en función de los aces que marca un jugador?</li>
+            <li>¿Cuáles son las estadísticas descriptivas de los jugadores del top 10 en términos de edad, altura, país de origen y estadísticas de juego?</li>
+            <li>¿Existe una diferencia significativa en el rendimiento de los jugadores del top 10 según la superficie del torneo?</li>
+            <li>¿Según la edad cómo se comportan las cualidades de los jugadores?</li>
+            <li>¿Cuál es el porcentaje de partidos ganados por país y continente?</li>
+            <li>¿Qué país tiene más partidos ganados?</li>
+          </ul>"))
+                      ),
+                      ####OBJETIVOS####
+                      tabItem("Objetivos",
+                              box(title = "Objetivos", status = "info", width = 12, HTML("<ul>
+            <li>Analizar la relación entre los Aces marcados y los Partidos Ganados.</li>
+            <li>Describir las características de los jugadores en el top 10.</li>
+            <li>Comparar el rendimiento de los jugadores en diferentes superficies.</li>
+            <li>Estudio del radio de victorias y derrotas de los jugadores en top 10.</li>
+            <li>Observar la relación entre distintas variables.</li>
+                                                                                           </ul>"))
                       ),
                       ####BASE DE DATOS-BODY#### 
                       
                       tabItem(tabName = "Datos", 
-                              DT::dataTableOutput("datos", width = "100%", height = "500px")
+                              DTOutput("datos", width = "100%", height = "500px")
                       ),
-                      ####ESTADISTICAS####
-                      tabItem(tabName = "grafico",
+                      ####BASES LEGALES####
+                      tabItem(tabName = "BasesLegales",
+                              box(title = "Bases legales", width = 12, background = "navy",
+                                  h3("Ley de la función pública de estadística"), h4("Artículo 11: Los datos de carácter personal, sólo se podrán recolectar y someter a tratamiento, cuando sean adecuados, pertinentes y no excesivos en relación con el ámbito y 
+                                                                               la finalidad determinada, explícita y legítima para la que se hayan obtenido."),
+                                  h4("Estos datos no podrán usarse para finalidad distinta de aquella para la cual han sido recogidos. No se considerará incompatible el tratamiento posterior de los mismos con fines históricos o científicos."),
+                                  h4("Artículo 16: Todas las personas naturales y jurídicas, privadas y públicas que difundan información estadística están en la obligación de indicar la fuente del dato.")
+                              )
+                      ),
+                      ####DOCUMENTACION####
+                      tabItem(tabName = "Documentacion",
+                              box(title = "Documentacion", width = 12, background = "navy",
+                                  h4("Cada campo representa un atributo específico relacionado con los partidos de tenis, como el ID del torneo, el nombre del mismo, la superficie de juego, el nivel del torneo, y los detalles del ganador, incluyendo sus Id, entradas, nombres, mano hábil (izquierda o derecha), altura, país de origen del jugador y edad. Esta estructura es relevante para el análisis estadístico de la investigación en curso."),
+                                  HTML ("<ul> 
+                                  <li>winner_id: Es la identificación del jugador en la base de datos.</li>
+                                  <li>w_ace: Representa los ases del ganador del partido.</li>
+                                  <li>w_df: Representa las dobles faltas del ganador del partido.</li>
+                                  <li>w_svpt: Representa los puntos de servicio del ganador del partido.</li>
+                                  <li>winner_ht: Representa la altura en centímetros del ganador del partido.</li>
+                                  <li>winner_hand: Representa la mano hábil del ganador del partido.</li>
+                                  <li>winner_age: Representa la edad en años del ganador del partido.</li>
+                                  <li>PG: Representa los partidos ganados acumulados por jugador en cada torneo.</li>
+                                  <li>winner_name:  Representa el nombre y el apellido del ganador del partido.</li>
+                                  <li>winner_ioc: Representa el país representado mediante el COI.</li>
+                                  <li>w_bpSaved: Representa los puntos de quiebre salvados por el ganador del partido.</li>
+                                  <li>w_bpFaced: Representa los puntos de quiebre enfrentados por el ganador del partido.</li>
+                                  <li>tourney_id: Es el identificador del torneo.</li>
+                                  <li>surface: Es la superficie en la que se juega el partido.</li>
+                                  <li>tourney_level: Es el nivel del torneo.</li>
+                                  <li>tourney_name: Es el nombre del torneo.</li>
+                                  </ul>")
+                              )
+                      ),
+                      ####ESTADISTICAS DESCRIPTIVAS####
+                      tabItem( tabName = "estadistica1",
+                               box(width = 12,
+                                   DTOutput("est.PuntosRank", width = "100%", height = "500px"), title = "Estadisticas descriptivas de los puntos en el ranking")
+                      ),
+                      
+                      tabItem( tabName = "estadistica2",
+                               box(width = 12,
+                                   DTOutput("est.Altura", width = "100%", height = "500px"), title = "Estadisticas descriptivas de la altura")
+                      ),
+                      
+                      tabItem( tabName = "estadistica3",
+                               box(width = 12,
+                                   DTOutput("est.Edad", width = "100%", height = "500px"), title = "Estadisticas descriptivas de la edad")
+                      ),
+                      
+                      tabItem( tabName = "estadistica4",
+                               box(width = 12,
+                                   DTOutput("est.DFaltas", width = "100%", height = "500px"), title = "Estadisticas descriptivas de las dobles faltas")
+                      ),
+                      
+                      tabItem( tabName = "estadistica5",
+                               box(width = 12,
+                                   DTOutput("est.Aces", width = "100%", height = "500px"), title = "Estadisticas descriptivas de los aces")
+                      ),
+                      
+                      tabItem( tabName = "estadistica6",
+                               box(width = 12,
+                                   DTOutput("est.PtServicio", width = "100%", height = "500px"), title = "Estadisticas descriptivas de los puntos de servicio")
+                      ),
+                      
+                      tabItem( tabName = "correlacion",
+                               box(width = 12, title = "Correlacion mas alta para los partidos ganados", background = "light-blue", 
+                                   DTOutput("Cor.PG.Aces", width = "100%", height = "500px"))
+                      ),
+                      
+                      ####GRAFICOS####
+                      tabItem(tabName = "grafico1",
                               fluidRow(
                                 column(width = 10, 
                                        infoBox("2da posicion con mayor cantidad de tarjetas rojas acumuladas", h3("DF,MF/19.05%"),width =7 , color = "red"),
                                        infoBox("Posicion con mayor cantidad de tarjetas rojas acumuladas", h3("DF/28.57%"), width = 6, color = "blue"),
                                        fluidRow(column(width =10),
-                                                box(title = "Grafico de barras", plotOutput("grafico"), background = "purple", width = 12)))
+                                                box(title = "Box plot", plotlyOutput("grafico1"), background = "purple", width = 12)))
                               )),
                       
                       tabItem(tabName = "grafico2", 
                               fluidRow(
                                 column(width = 7,
-                                       box(title = "Grafico de dispersión ", plotOutput("grafico2"), background = "purple", width = 12)
+                                       box(title = "Grafico de dispersión ", plotlyOutput("grafico2"), background = "purple", width = 12)
                                 ),
                                 column(width = 5,
                                        infoBox("Tendencia de partidos para los jugadores cuando tienen tarjeta roja", h3("Desde 5 a 10 partidos jugados"), width = 12, color = "blue"),
@@ -136,7 +226,7 @@ ui<-dashboardPage(title="TRABAJO FINAL DE COMPUTACION 2", skin= "purple",
                       tabItem(tabName = "grafico3", 
                               fluidRow(
                                 column(width = 7,
-                                       box(title = "Grafico de caja y bigote", plotOutput("grafico3"), background = "purple", width = 12)
+                                       box(title = "Grafico de caja y bigote", plotlyOutput("grafico3"), background = "purple", width = 12)
                                 ),
                                 column(width = 5,
                                        infoBox("Similitud entre las edades de los defensores con tarjeta roja", h3("Existente"), width = 12, color = "blue"),
@@ -150,7 +240,7 @@ ui<-dashboardPage(title="TRABAJO FINAL DE COMPUTACION 2", skin= "purple",
                       tabItem(tabName = "grafico4",
                               fluidRow(
                                 column(width = 7,
-                                       box(title = "Graficos de barras", plotOutput("grafico4"), background = "purple", width = 12)
+                                       box(title = "Graficos de barras", plotlyOutput("grafico4"), background = "purple", width = 12)
                                 ),
                                 column(width = 5,
                                        infoBox(title = "Intervalo de edades para DF con una tarjeta roja", h3("20-25 y 25-30"), width = 12, color = "blue" ),
@@ -178,7 +268,7 @@ ui<-dashboardPage(title="TRABAJO FINAL DE COMPUTACION 2", skin= "purple",
                       tabItem(tabName = "grafico6",
                               fluidRow(
                                 column(width = 7,
-                                       box(title = "Grafico de barras", plotOutput("grafico6"), background = "purple", width = 12)
+                                       box(title = "Grafico de barras", plotlyOutput("grafico6"), background = "purple", width = 12)
                                 ),
                                 column(width = 5,
                                        infoBox("País con mayor cantidad de tarjetas rojas en DF", h3("DE/Alemania"), width = 12, color = "blue"
@@ -186,6 +276,19 @@ ui<-dashboardPage(title="TRABAJO FINAL DE COMPUTACION 2", skin= "purple",
                                        valueBox("1", "Cantidad de tarjetas rojas mas frecuentes por pais en DF", icon = icon("chart-simple"), color ="light-blue", width = 12)
                                 )
                               )
+                      ),
+                      
+                      tabItem( tabName = "grafico7",
+                               box( title = "Grafico de correlacion", plotlyOutput("grafico7"), width = 12, background = "purple")
+                      ),
+                      tabItem( tabName = "grafico8",
+                               box( title = "Grafico de correlacion", plotOutput("grafico8"), width = 12, background = "purple")
+                      ),
+                      tabItem( tabName = "grafico9",
+                               box( title = "Boxs plots", plotOutput("grafico9"), width = 12, background = "purple")
+                      ),
+                      tabItem( tabName = "grafico10",
+                               box( title = "Grafico de dispersion", plotlyOutput("grafico10"), width = 12, background = "purple")
                       ),
                       ####RESULTADOS####                              
                       tabItem("Resultados",
@@ -207,12 +310,15 @@ ui<-dashboardPage(title="TRABAJO FINAL DE COMPUTACION 2", skin= "purple",
                                   h4("Finalmente, un atributo que pienso es importante a tener en cuenta a futuro, es determinar exactamente qué tipo de razones hubo para que los defensores tuvieran tal cantidad de tarjetas rojas, ya sea por tecnicismos o actitudes antideportivas, además de cómo se mencionó anteriormente, comparar con otros estudios más elaboras para así poder corregir el patrón de dicho jugador.  ")
                               )
                       ),
+                      ####BIBLIOGRAFIA####
                       tabItem("Bibliografía",
                               box(width = 12, status = "info", background = "light-blue", title = "Bibliografía",
-                                  h4("->https://www.researchgate.net/figure/Figura-2-Promedio-de-tarjetas-amarillas-Fuente-elaboracion-propia-con-datos-de_fig1_320151136"),
-                                  h4("->https://es.uefa.com/uefachampionsleague/news/027d-17233a7fd323-beac5a4a678b-1000--tarjetas-amarillas-en-champions-league-cuantas-tarjetas-prov/"),
-                                  h4("->https://www.marca.com/futbol/champions-league/2022/04/26/6266b083e2704e9d558b4603.html"),
-                                  h4("->https://noti-deportes.com/que-significan-las-tarjetas-amarillas-y-rojas-en-el-futbol/#:~:text=En%20el%20f%C3%BAtbol%2C%20%E2%80%8B%E2%80%8Bdos%20tarjetas%20amarillas%20equivalen%20a,el%20jugador%20deber%C3%A1%20abandonar%20el%20terreno%20de%20juego.") )
+                                  HTML("<ul>
+                                        <li> Sackmann, J. (2021). tennis_atp: ATP Tennis Rankings, Results, and Stats. https://github.com/JeffSackmann/tennis_atp   </li>
+                                        <li> Sanchéz, B. (2013). Historia y evolución del tenis. Researchgate. https://www.researchgate.net/publication/259821837_Historia_y_evolucion_del_tenis   </li>
+                                        <li> Sánchez, B. C. (2022). Cuál es el deporte más popular del mundo. mundodeportivo.  https://www.mundodeportivo.com/uncomo/deporte/articulo/cual-es-el-deporte-mas-popular-del-mundo-52978.html   </li>
+                                        </ul>" )
+                              )
                               
                       )
                     )
@@ -221,18 +327,27 @@ ui<-dashboardPage(title="TRABAJO FINAL DE COMPUTACION 2", skin= "purple",
 ####SERVER####
 
 server <- function(input, output) { 
-  
-  output$datos<-DT::renderDataTable(dataframe_tenis)
-  output$grafico<-renderPlot({grafico.1})
-  output$grafico2<-renderPlot({grafico.2})
-  output$grafico3<-renderPlot({grafico.3})
-  output$grafico4<-renderPlot({grafico.4})
+  output$datos <- renderDT({datatable(dataframe_tenis, options = list(scrollX = TRUE)) })
+  output$est.PuntosRank <- renderDT({datatable(dataframe.ED1) })
+  output$est.Altura <-     renderDT({datatable(dataframe.ED2) })
+  output$est.Edad <-       renderDT({datatable(dataframe.ED3) })
+  output$est.DFaltas <-    renderDT({datatable(dataframe.ED4) })
+  output$est.Aces <-       renderDT({datatable(dataframe.ED5) })
+  output$est.PtServicio <- renderDT({datatable(dataframe.ED6) })
+  output$Cor.PG.Aces <-    renderDT({datatable(dataframe.ED7) })
+  output$grafico1<-renderPlotly({grafico.D.1})
+  output$grafico2<-renderPlotly({grafico.D.2})
+  output$grafico3<-renderPlotly({grafico.D.3})
+  output$grafico4<-renderPlotly({grafico.D.4})
   output$grafico5<-renderPlot({grafico.5})
-  output$grafico6<-renderPlot({grafico.6})
+  output$grafico6<-renderPlotly({grafico.D.6})
+  output$grafico7<-renderPlotly({grafico.D.7})
+  output$grafico8<-renderPlot({grafico.8})
+  output$grafico9<-renderPlot({grafico.9})
+  output$grafico10<-renderPlotly({grafico.D.10})
   output$logoUCV<-renderImage({return(list(src = "www/logoUCV.png"), content_type = "image/png")})
   output$logoEECA<-renderImage({return(list(src = "www/logoEECA.jpg"), content_type = "image/png")})
 }
 
 
 shinyApp(ui,server)
-
