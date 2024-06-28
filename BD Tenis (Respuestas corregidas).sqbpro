@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/jg_pg/OneDrive/Escritorio/BD Tenis.sqlite" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="pragmas structure browser query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="9571"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,11:mainRespuesta 3"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Respuesta 1" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="122"/><column index="2" value="40"/><column index="3" value="77"/><column index="4" value="53"/><column index="5" value="101"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Respuesta 2" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="60"/><column index="2" value="121"/><column index="3" value="103"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Respuesta 3" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="121"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Respuesta 4" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="72"/><column index="2" value="60"/><column index="3" value="60"/><column index="4" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Respuesta 5" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths/><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="matches" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="47" mode="1"/></sort><column_widths><column index="1" value="246"/><column index="2" value="184"/><column index="3" value="57"/><column index="4" value="74"/><column index="5" value="98"/><column index="6" value="335"/><column index="7" value="83"/><column index="8" value="71"/><column index="9" value="91"/><column index="10" value="96"/><column index="11" value="178"/><column index="12" value="92"/><column index="13" value="74"/><column index="14" value="78"/><column index="15" value="84"/><column index="16" value="59"/><column index="17" value="79"/><column index="18" value="84"/><column index="19" value="198"/><column index="20" value="80"/><column index="21" value="62"/><column index="22" value="66"/><column index="23" value="72"/><column index="24" value="186"/><column index="25" value="58"/><column index="26" value="46"/><column index="27" value="59"/><column index="28" value="50"/><column index="29" value="40"/><column index="30" value="56"/><column index="31" value="61"/><column index="32" value="77"/><column index="33" value="80"/><column index="34" value="69"/><column index="35" value="83"/><column index="36" value="80"/><column index="37" value="42"/><column index="38" value="40"/><column index="39" value="48"/><column index="40" value="53"/><column index="41" value="69"/><column index="42" value="72"/><column index="43" value="61"/><column index="44" value="75"/><column index="45" value="72"/><column index="46" value="89"/><column index="47" value="187"/><column index="48" value="77"/><column index="49" value="125"/><column index="50" value="79"/><column index="51" value="79"/><column index="52" value="67"/><column index="53" value="67"/><column index="54" value="103"/><column index="56" value="82"/><column index="57" value="86"/><column index="58" value="92"/><column index="59" value="103"/><column index="61" value="82"/><column index="62" value="86"/><column index="63" value="92"/><column index="64" value="91"/><column index="65" value="88"/><column index="66" value="70"/><column index="67" value="74"/><column index="68" value="80"/><column index="69" value="91"/><column index="70" value="88"/><column index="71" value="70"/><column index="72" value="74"/><column index="73" value="80"/><column index="74" value="97"/><column index="75" value="145"/><column index="76" value="97"/><column index="77" value="145"/><column index="78" value="85"/><column index="79" value="133"/><column index="80" value="85"/><column index="81" value="133"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="players" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="68"/><column index="2" value="88"/><column index="3" value="107"/><column index="4" value="40"/><column index="5" value="73"/><column index="6" value="40"/><column index="7" value="49"/><column index="8" value="81"/></column_widths><filter_values><column index="2" value="guillermo"/></filter_values><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="rankings" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="94"/><column index="2" value="40"/><column index="3" value="49"/><column index="4" value="48"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">/* pregunta 1: Se requiere observar el nombre, la edad, la mano habil
+y los puntos de los mejores 20 jugadores de tenis el ranking*/
+
+--subquery (mejores 20 tenistas en la historia)
+
+SELECT max (rankings.points) as puntos, min (rankings.rank) as PosicionActual, rankings.player
+FROM rankings
+WHERE points is not NULL and rank &lt;= 20
+GROUP by rank
+ORDER by puntos DESC;
+
+--Consulta final ( join con la tabla players )
+
+
+SELECT players.name_first as &quot;Primer nombre&quot;,
+players.name_last as &quot;Apellido&quot;,
+players.dob as &quot;Fecha de nacimiento&quot;,
+players.hand as &quot;Mano habil&quot;,
+top20H.puntos,
+top20H.MejorPosicion as &quot;Mejor posicion&quot;
+FROM (SELECT max (rankings.points) as puntos, min (rankings.rank) as MejorPosicion, rankings.player
+FROM rankings
+WHERE points is not NULL and rank &lt;= 20
+GROUP by rank
+ORDER by puntos DESC) as top20H
+JOIN
+players on players.player_id = top20H.player
+ORDER by top20H.puntos DESC;
+
+--Consulta final ( join con la tabla matches)
+
+CREATE VIEW &quot;Respuesta 1&quot; as
+SELECT subquery.NombreYapellido as &quot;Nombre y apellido&quot;, 
+ROUND((julianday('now') - julianday(players.dob)) / 365.25 , 0) AS Edad, 
+subquery.ManoHabil as &quot;Mano habil&quot;,
+subquery.puntos, 
+subquery.MejorPosicion as &quot;Mejor posicion&quot;
+FROM (
+SELECT matches.winner_name as NombreYapellido,
+matches.winner_hand as ManoHabil,
+top20H.puntos,
+top20H.MejorPosicion,
+top20H.jugador 
+FROM (SELECT max (rankings.points) as puntos, min (rankings.rank) as MejorPosicion, rankings.player as jugador
+FROM rankings
+WHERE points is not NULL and rank &lt;= 20
+GROUP by rank
+ORDER by puntos DESC) as top20H 
+JOIN
+matches on matches.winner_id = top20H.jugador
+GROUP by matches.winner_name
+ORDER by top20H.puntos DESC ) as subquery
+JOIN players on subquery.jugador = players.player_id
+ORDER by subquery.puntos DESC;
+
+</sql><sql name="SQL 2">/* Pregunta 2: Se tiene la duda de cuales son las 5 nacionalidades con mas 
+ matches ganados y el promedio de edad de estos paises */
+ 
+CREATE VIEW &quot;Respuesta 2&quot; as 
+SELECT winner_ioc as Pais,
+count(winner_id) as &quot;Partidos ganados&quot;,
+CAST (round (avg (winner_age) , 0) as INT) as &quot;Edad promedio&quot;
+FROM matches
+GROUP by winner_ioc
+ORDER by &quot;Partidos ganados&quot; DESC
+LIMIT 5;</sql><sql name="SQL 3">/* pregunta 3: Es de interes observar el nombre, el ranking, los puntos,
+la estatura y la edad de los 15 jugadores con mas matches ganados*/
+
+CREATE VIEW &quot;Respuesta 3&quot; as
+SELECT m.winner_name AS Nombre, s.Rango AS &quot;Mayor Rango&quot;,
+       CAST(s.Puntos AS INT) AS Puntos, 
+       CAST(winner_ht AS INT) AS &quot;Estatura(cm)&quot;,
+	   CAST(winner_age AS INT) AS Edad, 
+	   COUNT(winner_id) AS &quot;Partidos Ganados&quot;
+FROM (
+        SELECT MIN(rank) AS Rango, player, SUM(points) as Puntos FROM rankings
+        GROUP BY player
+        ORDER BY Puntos DESC) s
+JOIN matches m ON m.winner_id = s.player
+WHERE Puntos IS NOT NULL
+GROUP BY Nombre
+ORDER BY &quot;Partidos Ganados&quot; DESC
+LIMIT 15
+
+DROP VIEW &quot;Respuesta 3&quot;
+
+
+select count (matches.winner_id) as x, players.player_id, players.name_first, players.name_last
+from matches
+JOIN
+players on matches.winner_id = players.player_id
+GROUP by players.player_id
+ORDER by x DESC
+
+-- Subquery 
+
+SELECT MAX(points) as puntos, MIN(rank) as MejorRanking, player 
+FROM rankings 
+WHERE points IS NOT NULL 
+GROUP BY rankings.player
+ORDER by points DESC;
+
+
+</sql><sql name="SQL 6">--Pregunta 4: Se requiere observar si los 5 mejores jugadores de cada superficie son los mismos 
+
+--idea 1
+
+/* SELECT matches.surface, count(matches.winner_id) as X, matches.winner_id
+FROM matches 
+WHERE winner_id &gt; 0 and surface is not NULL and surface = 'Hard'
+group by matches.surface, matches.winner_id
+ORDER by X DESC 
+LIMIT 5 */
+
+/* En base a la consulta que se encuentra un poco antes de este texto se creo las demas para las otras superficies, posterior
+a eso se unio cada una de las consultas y se creo un join para traer la informacion restante acerca de los tenistas
+Ventaja: Usa clausulas mas sencillas ; Las consultas unidas son sencillas
+Desventajas: Debido a como se comportan los campos no es posible ordenar los puntos de mayor a menor ; Su sintaxis es extensa */
+
+SELECT players.name_first as Nombre, players.name_last as Apellido, subquery.total_wins as &quot;Partidos ganados&quot;, subquery.surface as Superficie
+FROM (
+    SELECT surface, total_wins, winner_id
+    FROM (
+    SELECT m.surface, count(m.winner_id) as total_wins, m.winner_id
+    FROM matches m
+    WHERE m.winner_id &gt; 0 and m.surface is not NULL and m.surface = 'Carpet'
+    GROUP BY m.surface, m.winner_id
+    ORDER BY total_wins DESC 
+    LIMIT 5)
+UNION
+SELECT surface, total_wins, winner_id
+FROM (
+    SELECT m.surface, count(m.winner_id) as total_wins, m.winner_id
+    FROM matches m
+    WHERE m.winner_id &gt; 0 and m.surface is not NULL and m.surface = 'Hard'
+    GROUP BY m.surface, m.winner_id
+    ORDER BY total_wins DESC 
+    LIMIT 5)
+UNION
+SELECT surface, total_wins, winner_id
+FROM (
+    SELECT m.surface, count(m.winner_id) as total_wins, m.winner_id
+    FROM matches m
+    WHERE m.winner_id &gt; 0 and m.surface is not NULL and m.surface = 'Grass'
+    GROUP BY m.surface, m.winner_id
+    ORDER BY total_wins DESC 
+    LIMIT 5)
+UNION
+SELECT surface, total_wins, winner_id
+FROM (
+    SELECT m.surface, count(m.winner_id) as total_wins, m.winner_id
+    FROM matches m
+    WHERE m.winner_id &gt; 0 and m.surface is not NULL and m.surface = 'Clay'
+    GROUP BY m.surface, m.winner_id
+    ORDER BY total_wins DESC 
+    LIMIT 5) 
+	) as subquery
+	JOIN
+	players on players.player_id = subquery.winner_id
+	ORDER by Superficie ASC;
+	
+
+
+
+
+-----------------------------------------------------------------------------------------
+
+--idea 2
+
+/* En este caso tambien se usa como base la misma consulta que se utilizo para la idea 1, sin embargo aqui se utiliza la funcion
+row_number con el proposito de numerar los registros corespondientes a la superficie, condicionado a que esa numeracion dependera del 
+orden del conteo de los winner_id, que en este caso se toma para saber los partidos ganados por uno de los tenistas. Finalmente se crea 
+un join para traer la informacion restante del tenista
+Ventajas: Sintaxis mas corta; Mayor rendimiento; Mayor orden
+Desventajas: Hace falta un mayor entendimiento de las particaciones en sql */
+
+CREATE VIEW &quot;Respuesta 4&quot; as 
+SELECT NT.Superficie, NT.top, players.name_first as Nombre, players.name_last as Apellido
+FROM (
+SELECT winner_id, surface as Superficie,
+row_number () OVER ( PARTITION BY surface ORDER by count (winner_id) DESC ) top
+FROM matches 
+WHERE winner_id &gt; 0 and surface is not NULL
+GROUP by surface, winner_id ) as NT
+JOIN 
+players on players.player_id = NT.winner_id
+WHERE top &lt;= 5
+ORDER by Superficie, top ASC ; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</sql><sql name="SQL 7">/* Pregunta 5: Cuantos partidos han disputados los 15 jugadores con mayor puntaje
+en los diferentes niveles de torneos */
+
+--Primer subquery (top 15 de los tenistas con mas puntos)
+
+SELECT max (rankings.points) as Puntos, min (rankings.rank) as PosicionActual, rankings.player as Tenista
+FROM rankings
+WHERE points is not NULL and rank &lt;= 15
+GROUP by rank
+ORDER by puntos DESC;
+
+--Consulta final (Partidos jugados por el top 15 de los tenistas con mas puntos en cada nivel de torneo)
+
+CREATE VIEW &quot;Respuesta 5&quot; as 
+SELECT players.name_first as Nombre, players.name_last as Apellido, TECN.Puntos, TECN.nivel, TECN.PartidosTotales as &quot;Partidos Totales&quot;
+FROM (
+SELECT count (matches.tourney_level) as PartidosTotales, 
+matches.tourney_level as nivel,
+top15.Tenista,
+top15.Puntos
+FROM (SELECT max (rankings.points) as Puntos, min (rankings.rank) as PosicionActual, rankings.player as Tenista
+FROM rankings
+WHERE points is not NULL and rank &lt;= 15
+GROUP by rank
+ORDER by puntos DESC) as top15
+JOIN
+matches on matches.winner_id = top15.Tenista
+GROUP by top15.Tenista, matches.tourney_level
+) as TECN  /*TECN: Tenista en cada nivel*/
+JOIN
+players on players.player_id = TECN.Tenista
+ORDER by Puntos DESC;
+
+ /* SELECT count (matches.tourney_level) as cuenta,
+matches.tourney_level as nivel
+FROM matches
+GROUP by nivel
+HAVING cuenta &gt; 100 and cuenta &lt;&gt; 31717 and cuenta &lt;&gt; 18634; */
+
+
+
+
+</sql><sql name="SQL 8">--Codigo para el calculo de la edad y el update del dob a formato tipo fecha
+
+SELECT
+    ROUND((julianday('now') - julianday(dob)) / 365.25) AS edad
+FROM players
+WHERE player_id = 212625;
+
+
+UPDATE rankings
+SET ranking_date = substr(ranking_date, 1, 4) || '-' || substr(ranking_date, 5, 2) || '-' || substr(ranking_date, 7, 2);\
+
+
+</sql><current_tab id="2"/></tab_sql></sqlb_project>
